@@ -71,7 +71,7 @@ fn make_move(res: &mut Vec<Vec<i32>>, m: &Vec<Vec<(i32)>>, m_x: usize, m_y: usiz
   steps += m[me_y][me_x];
   if steps >= res[me_y][me_x] {return;} else {res[me_y][me_x] = steps;}
   if me_x == width && me_y == depth {
-    //println!("REACHED THE END in {} steps!", steps);
+    println!("REACHED THE END in {} steps!", steps);
   } else {
     if me_x > 0 && m[me_y][me_x -1] > 0 { make_move(res, m, me_x-1, me_y, steps, width, depth); }
     if me_x < width && m[me_y][me_x +1] > 0 { make_move(res, m, me_x+1, me_y, steps, width, depth); }
